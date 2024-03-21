@@ -170,14 +170,26 @@ class PlayList {
      *  If start is negative or greater than size - 1, returns -1.
      */
     private int minIndex(int start) {
-        //// replace the following statement with your code
-        return 0;
+        //// replace the following statement with your code // check how we learned in the class to do this?
+        int minDuration = tracks[start].getDuration();
+        int minInd = start;
+        for (int i = minInd; i < size; i++){
+            if( tracks[i].getDuration() < minDuration){
+                minDuration = tracks[i].getDuration();
+                minInd = i;
+            } 
+        }
+        return minInd ;
     }
 
     /** Returns the title of the shortest track in this list. 
      *  If the list is empty, returns null. */
     public String titleOfShortestTrack() {
-        return tracks[minIndex(0)].getTitle();
+        if (size == 0){ // checks if list is empty
+            return null;
+        } else {
+            return tracks[minIndex(0)].getTitle();
+        }   
     }
 
     /** Sorts this list by increasing duration order: Tracks with shorter
@@ -188,5 +200,8 @@ class PlayList {
         // Uses the selection sort algorithm,  
         // calling the minIndex method in each iteration.
         //// replace this statement with your code
+        for( int i = 0; i < size; i++)
+        if( minIndex(i) < minIN
+
     }
 }
