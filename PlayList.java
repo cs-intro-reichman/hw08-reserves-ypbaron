@@ -81,7 +81,9 @@ class PlayList {
     public int indexOf(String title) {
         //// replace the following statement with your code
         for (int i = 0; i < size; i++){
-           if ( tracks[i].getTitle().equals(title.toLowerCase())){// looks for given title in lowercase
+            String tempTrack = tracks[i].getTitle().toLowerCase();
+
+           if ( tempTrack.equals(title.toLowerCase())){// looks for given title in lowercase
             return i; // returns the index if found
            } 
         }
