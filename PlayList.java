@@ -200,8 +200,8 @@ class PlayList {
         // Uses the selection sort algorithm,  
         // calling the minIndex method in each iteration.
         //// replace this statement with your code
-        for( int i = 0; i < size; i++)
-        if( minIndex(i) < minIN
-
+        for( int i = 0; i < size; i++){
+            tracks[i] = tracks[minIndex(i)];
+        }
     }
 }
