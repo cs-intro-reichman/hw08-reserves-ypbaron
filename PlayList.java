@@ -203,10 +203,10 @@ class PlayList {
         // calling the minIndex method in each iteration.
         //// replace this statement with your code   
         for( int i = 0; i < size; i++){
-            int minIndex = minIndex(i);        
-            Track now = tracks[minIndex(i)];
+            int minIndex = minIndex(i);  // uses minIndex to find the min duration the is in the unsorted part of the string      
+            Track now = tracks[minIndex(i)]; // creates a new track thats temporary that is the minimumal duration track of the given list
             tracks[minIndex] = tracks[i];
-            tracks[i] = now;
+            tracks[i] = now;// assigns the track to its new place
         }
     }
 }
